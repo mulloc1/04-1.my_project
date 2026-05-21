@@ -13,10 +13,15 @@
   <script type="module" defer src="./js/main.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#hero">Portfolio</a>
-      <ul>
+  <header class="header">
+    <nav class="nav">
+      <a href="#hero" class="nav__logo">Portfolio</a>
+      <button class="nav__hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="nav__hamburger-bar"></span>
+        <span class="nav__hamburger-bar"></span>
+        <span class="nav__hamburger-bar"></span>
+      </button>
+      <ul class="nav__menu">
         <li><a href="#hero">Hero</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -27,54 +32,130 @@
   </header>
 
   <main>
-    <section id="hero">
-      <h1>Your Name</h1>
-      <p>Short tagline or role</p>
+    <section id="hero" class="hero">
+      <h1 class="hero__title">Your Name</h1>
+      <p class="hero__subtitle">Frontend Developer · Building responsive web experiences</p>
+      <a href="#contact" class="btn btn--primary">Get in Touch</a>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>Brief introduction placeholder.</p>
-      <img src="./images/profile.svg" alt="Profile portrait placeholder">
+    <section id="about" class="about">
+      <h2 class="section-title">About</h2>
+      <div class="about__content">
+        <div class="about__text">
+          <p>
+            I am a web developer passionate about crafting clean, accessible, and
+            performant user interfaces. I enjoy turning ideas into responsive
+            experiences with semantic HTML, modern CSS, and vanilla JavaScript.
+          </p>
+          <p>
+            When I am not coding, I explore new tools, contribute to open source,
+            and refine my portfolio projects.
+          </p>
+        </div>
+        <img
+          class="about__image"
+          src="./images/profile.svg"
+          alt="Portrait of Your Name"
+        >
+      </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
+    <section id="skills" class="skills-section">
+      <h2 class="section-title">Skills</h2>
+      <ul class="skills">
+        <li class="skills__item">HTML</li>
+        <li class="skills__item">CSS</li>
+        <li class="skills__item">JavaScript</li>
+        <li class="skills__item">Responsive Design</li>
+        <li class="skills__item">Git</li>
+        <li class="skills__item">REST APIs</li>
       </ul>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>GitHub repositories will appear here.</p>
+    <section id="projects" class="projects-section">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3 class="project-card__title">portfolio-site</h3>
+          <p class="project-card__description">
+            A responsive personal portfolio built with semantic HTML, CSS Grid,
+            and vanilla JavaScript modules.
+          </p>
+          <div class="project-card__meta">
+            <span class="project-card__language">JavaScript</span>
+            <span class="project-card__stars">★ 12</span>
+          </div>
+          <a href="#" class="project-card__link">View on GitHub</a>
+        </article>
+
+        <article class="project-card">
+          <h3 class="project-card__title">todo-cli</h3>
+          <p class="project-card__description">
+            A command-line task manager with persistent storage and simple
+            filtering for daily productivity.
+          </p>
+          <div class="project-card__meta">
+            <span class="project-card__language">Python</span>
+            <span class="project-card__stars">★ 8</span>
+          </div>
+          <a href="#" class="project-card__link">View on GitHub</a>
+        </article>
+
+        <article class="project-card">
+          <h3 class="project-card__title">weather-dashboard</h3>
+          <p class="project-card__description">
+            Fetches live weather data from a public API and renders loading,
+            error, and success states in the UI.
+          </p>
+          <div class="project-card__meta">
+            <span class="project-card__language">TypeScript</span>
+            <span class="project-card__stars">★ 15</span>
+          </div>
+          <a href="#" class="project-card__link">View on GitHub</a>
+        </article>
+
+        <article class="project-card">
+          <h3 class="project-card__title">css-component-library</h3>
+          <p class="project-card__description">
+            Reusable UI primitives powered by CSS custom properties for theming
+            and consistent spacing across pages.
+          </p>
+          <div class="project-card__meta">
+            <span class="project-card__language">CSS</span>
+            <span class="project-card__stars">★ 5</span>
+          </div>
+          <a href="#" class="project-card__link">View on GitHub</a>
+        </article>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <form>
-        <div>
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact</h2>
+      <form class="contact-form" novalidate>
+        <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name">
+          <input type="text" id="name" name="name" required>
+          <p class="error" data-for="name"></p>
         </div>
-        <div>
+        <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email">
+          <input type="email" id="email" name="email" required>
+          <p class="error" data-for="email"></p>
         </div>
-        <div>
+        <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message"></textarea>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <p class="error" data-for="message"></p>
         </div>
-        <button type="submit">Send</button>
+        <button type="submit" class="btn btn--primary">Send Message</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Your Name. All rights reserved.</p>
-    <ul>
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2026 Your Name. All rights reserved.</p>
+    <ul class="footer__social">
       <li><a href="#">GitHub</a></li>
       <li><a href="#">LinkedIn</a></li>
       <li><a href="#">Email</a></li>
