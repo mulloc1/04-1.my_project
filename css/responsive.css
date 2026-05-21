@@ -12,10 +12,22 @@
     display: none;
   }
 
-  .nav__menu {
+  .nav__menu,
+  .nav__menu--open {
     display: flex;
+    position: static;
+    flex-direction: row;
     align-items: center;
     gap: var(--space-5);
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;
+    border-bottom: none;
+    box-shadow: none;
+  }
+
+  .theme-toggle {
+    margin-left: 0;
   }
 
   .hero__title {

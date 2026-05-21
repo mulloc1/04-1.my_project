@@ -148,8 +148,16 @@ section {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
+  position: relative;
   min-height: var(--nav-height);
   padding: var(--space-3) var(--space-4);
+  transition: box-shadow var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.nav--scrolled {
+  background-color: var(--color-bg);
+  box-shadow: var(--shadow-nav);
 }
 
 .nav__logo {
@@ -160,6 +168,21 @@ section {
 
 .nav__menu {
   display: none;
+}
+
+.nav__menu--open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-nav);
+  z-index: 99;
 }
 
 .nav__menu a {
@@ -191,6 +214,84 @@ section {
   height: var(--space-1);
   background-color: var(--color-text);
   border-radius: var(--radius-sm);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+  padding: var(--space-2) var(--space-3);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-accent);
+}
+
+.theme-toggle__icon {
+  font-size: var(--font-size-base);
+  line-height: 1;
+}
+
+.to-top {
+  position: fixed;
+  right: var(--space-5);
+  bottom: var(--space-5);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-6);
+  height: var(--space-6);
+  padding: 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-bg);
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-card);
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity var(--transition-base),
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.to-top:hover {
+  transform: translateY(var(--card-lift));
+  box-shadow: var(--shadow-card-hover);
+}
+
+.to-top--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(var(--space-4));
+  transition: opacity var(--transition-base),
+    transform var(--transition-base);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card[data-animate].is-visible:hover {
+  transform: translateY(var(--card-lift));
 }
 
 /* Hero */
