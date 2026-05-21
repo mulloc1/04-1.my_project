@@ -49,6 +49,7 @@ p {
   --color-border: #e5e7eb;
   --color-accent-hover: #1d4ed8;
   --color-error: #dc2626;
+  --color-success: #16a34a;
 
   /* Spacing scale */
   --space-1: 0.25rem;
@@ -95,6 +96,7 @@ p {
   --color-border: #334155;
   --color-accent-hover: #93c5fd;
   --color-error: #f87171;
+  --color-success: #4ade80;
 }
 
 /* Shared layout */
@@ -488,6 +490,16 @@ section {
   border-color: var(--color-accent);
 }
 
+.form-group input.is-invalid,
+.form-group textarea.is-invalid {
+  border-color: var(--color-error);
+}
+
+.form-group input.is-invalid:focus,
+.form-group textarea.is-invalid:focus {
+  border-color: var(--color-error);
+}
+
 .form-group textarea {
   resize: vertical;
   min-height: calc(var(--space-8) * 2);
@@ -503,6 +515,14 @@ section {
   min-height: var(--font-size-base);
   font-size: var(--font-size-sm);
   color: var(--color-accent);
+}
+
+.form-status--success {
+  color: var(--color-success);
+}
+
+.form-status--error {
+  color: var(--color-error);
 }
 
 /* Footer */
