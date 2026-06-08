@@ -1,0 +1,10 @@
+{
+  "name": "04-1.my_project",
+  "private": true,
+  "scripts": {
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
