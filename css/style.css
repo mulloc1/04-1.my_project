@@ -120,7 +120,8 @@ section {
   border: none;
   border-radius: var(--radius-md);
   cursor: pointer;
-  transition: background-color var(--transition-base),
+  transition:
+    background-color var(--transition-base),
     transform var(--transition-base),
     box-shadow var(--transition-base);
 }
@@ -153,7 +154,8 @@ section {
   position: relative;
   min-height: var(--nav-height);
   padding: var(--space-3) var(--space-4);
-  transition: box-shadow var(--transition-base),
+  transition:
+    box-shadow var(--transition-base),
     background-color var(--transition-base);
 }
 
@@ -232,7 +234,8 @@ section {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   cursor: pointer;
-  transition: background-color var(--transition-base),
+  transition:
+    background-color var(--transition-base),
     border-color var(--transition-base);
 }
 
@@ -265,7 +268,8 @@ section {
   opacity: 0;
   pointer-events: none;
   cursor: pointer;
-  transition: opacity var(--transition-base),
+  transition:
+    opacity var(--transition-base),
     transform var(--transition-base),
     box-shadow var(--transition-base);
 }
@@ -283,7 +287,8 @@ section {
 [data-animate] {
   opacity: 0;
   transform: translateY(var(--space-4));
-  transition: opacity var(--transition-base),
+  transition:
+    opacity var(--transition-base),
     transform var(--transition-base);
 }
 
@@ -404,7 +409,8 @@ section {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
-  transition: transform var(--transition-base),
+  transition:
+    transform var(--transition-base),
     box-shadow var(--transition-base);
 }
 

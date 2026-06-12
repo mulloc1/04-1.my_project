@@ -1,124 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/responsive.css">
-  <script type="module" defer src="./js/main.js"></script>
-</head>
-<body>
-  <header class="header">
-    <nav class="nav">
-      <a href="#hero" class="nav__logo">Portfolio</a>
-      <ul class="nav__menu">
-        <li><a href="#hero">Hero</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button
-        class="theme-toggle"
-        type="button"
-        aria-pressed="false"
-        aria-label="Toggle dark mode"
-      >
-        <span class="theme-toggle__icon" aria-hidden="true">☀</span>
-        <span class="theme-toggle__label">Dark mode</span>
-      </button>
-      <button class="nav__hamburger" type="button" aria-label="Open menu" aria-expanded="false">
-        <span class="nav__hamburger-bar"></span>
-        <span class="nav__hamburger-bar"></span>
-        <span class="nav__hamburger-bar"></span>
-      </button>
-    </nav>
-  </header>
-
-  <main>
-    <section id="hero" class="hero" data-animate>
-      <h1 class="hero__title">Your Name</h1>
-      <p class="hero__subtitle">Frontend Developer · Building responsive web experiences</p>
-      <a href="#contact" class="btn btn--primary">Get in Touch</a>
-    </section>
-
-    <section id="about" class="about" data-animate>
-      <h2 class="section-title">About</h2>
-      <div class="about__content">
-        <div class="about__text">
-          <p>
-            I am a web developer passionate about crafting clean, accessible, and
-            performant user interfaces. I enjoy turning ideas into responsive
-            experiences with semantic HTML, modern CSS, and vanilla JavaScript.
-          </p>
-          <p>
-            When I am not coding, I explore new tools, contribute to open source,
-            and refine my portfolio projects.
-          </p>
-        </div>
-        <img
-          class="about__image"
-          src="./images/profile.svg"
-          alt="Portrait of Your Name"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <script type="module" defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#hero" class="nav__logo">Portfolio</a>
+        <ul class="nav__menu">
+          <li><a href="#hero">Hero</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Toggle dark mode"
         >
-      </div>
-    </section>
+          <span class="theme-toggle__icon" aria-hidden="true">☀</span>
+          <span class="theme-toggle__label">Dark mode</span>
+        </button>
+        <button
+          class="nav__hamburger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span class="nav__hamburger-bar"></span>
+          <span class="nav__hamburger-bar"></span>
+          <span class="nav__hamburger-bar"></span>
+        </button>
+      </nav>
+    </header>
 
-    <section id="skills" class="skills-section" data-animate>
-      <h2 class="section-title">Skills</h2>
-      <ul class="skills">
-        <li class="skills__item">HTML</li>
-        <li class="skills__item">CSS</li>
-        <li class="skills__item">JavaScript</li>
-        <li class="skills__item">Responsive Design</li>
-        <li class="skills__item">Git</li>
-        <li class="skills__item">REST APIs</li>
+    <main>
+      <section id="hero" class="hero" data-animate>
+        <h1 class="hero__title">Your Name</h1>
+        <p class="hero__subtitle">
+          Frontend Developer · Building responsive web experiences
+        </p>
+        <a href="#contact" class="btn btn--primary">Get in Touch</a>
+      </section>
+
+      <section id="about" class="about" data-animate>
+        <h2 class="section-title">About</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <p>
+              I am a web developer passionate about crafting clean, accessible,
+              and performant user interfaces. I enjoy turning ideas into
+              responsive experiences with semantic HTML, modern CSS, and vanilla
+              JavaScript.
+            </p>
+            <p>
+              When I am not coding, I explore new tools, contribute to open
+              source, and refine my portfolio projects.
+            </p>
+          </div>
+          <img
+            class="about__image"
+            src="./images/profile.svg"
+            alt="Portrait of Your Name"
+          />
+        </div>
+      </section>
+
+      <section id="skills" class="skills-section" data-animate>
+        <h2 class="section-title">Skills</h2>
+        <ul class="skills">
+          <li class="skills__item">HTML</li>
+          <li class="skills__item">CSS</li>
+          <li class="skills__item">JavaScript</li>
+          <li class="skills__item">Responsive Design</li>
+          <li class="skills__item">Git</li>
+          <li class="skills__item">REST APIs</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="projects-section" data-animate>
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid"></div>
+      </section>
+
+      <section id="contact" class="contact" data-animate>
+        <h2 class="section-title">Contact</h2>
+        <form class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" required />
+            <p
+              class="error"
+              data-for="name"
+              role="alert"
+              aria-live="polite"
+            ></p>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required />
+            <p
+              class="error"
+              data-for="email"
+              role="alert"
+              aria-live="polite"
+            ></p>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="5"
+              required
+            ></textarea>
+            <p
+              class="error"
+              data-for="message"
+              role="alert"
+              aria-live="polite"
+            ></p>
+          </div>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <button class="to-top" type="button" aria-label="Scroll to top">↑</button>
+
+    <footer class="footer">
+      <p class="footer__copyright">
+        &copy; 2026 Your Name. All rights reserved.
+      </p>
+      <ul class="footer__social">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Email</a></li>
       </ul>
-    </section>
-
-    <section id="projects" class="projects-section" data-animate>
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid"></div>
-    </section>
-
-    <section id="contact" class="contact" data-animate>
-      <h2 class="section-title">Contact</h2>
-      <form class="contact-form" novalidate>
-        <div class="form-group">
-          <label for="contact-name">Name</label>
-          <input type="text" id="contact-name" name="name" required>
-          <p class="error" data-for="name" role="alert" aria-live="polite"></p>
-        </div>
-        <div class="form-group">
-          <label for="contact-email">Email</label>
-          <input type="email" id="contact-email" name="email" required>
-          <p class="error" data-for="email" role="alert" aria-live="polite"></p>
-        </div>
-        <div class="form-group">
-          <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" rows="5" required></textarea>
-          <p class="error" data-for="message" role="alert" aria-live="polite"></p>
-        </div>
-        <button type="submit" class="btn btn--primary">Send Message</button>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-  </main>
-
-  <button class="to-top" type="button" aria-label="Scroll to top">↑</button>
-
-  <footer class="footer">
-    <p class="footer__copyright">&copy; 2026 Your Name. All rights reserved.</p>
-    <ul class="footer__social">
-      <li><a href="#">GitHub</a></li>
-      <li><a href="#">LinkedIn</a></li>
-      <li><a href="#">Email</a></li>
-    </ul>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

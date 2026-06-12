@@ -105,7 +105,8 @@ function toCard({ name, description, language, stargazers_count, html_url }) {
   card.querySelector(".project-card__description").textContent =
     description ?? "No description";
   card.querySelector(".project-card__language").textContent = language ?? "—";
-  card.querySelector(".project-card__stars").textContent = `★ ${stargazers_count}`;
+  card.querySelector(".project-card__stars").textContent =
+    `★ ${stargazers_count}`;
 
   const link = card.querySelector(".project-card__link");
   link.href = html_url;
